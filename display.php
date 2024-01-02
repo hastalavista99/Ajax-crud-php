@@ -2,7 +2,7 @@
 include 'connect.php';
 
 if(isset($_POST['displaySend'])){
-    $table='<table class="table">
+    $table='<table id="dataTable" class="table">
     <thead>
       <tr>
         <th scope="col">Sl No</th>
@@ -42,3 +42,14 @@ if(isset($_POST['displaySend'])){
 }
 
 ?>
+
+<!-- Include jQuery and DataTables scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+<!-- Initialize DataTables on your table -->
+<script>
+  $(document).ready(function() {
+    $('#dataTable').DataTable();
+  });
+</script>
